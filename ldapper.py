@@ -23,6 +23,7 @@ class LdapperModelDefinition(object):
         return LdapperModelDefinition(self._searchBase,
                 self._primarySearch,
                 attributes=self._attributes,
+                wrapper=self._wrapper,
                 connection=connection)
 
     def get(self, primary):
