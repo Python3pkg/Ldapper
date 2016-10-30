@@ -1,9 +1,9 @@
 from distutils.core import setup
 setup(
   name = 'ldapper',
-  packages = ['mypackage'], # this must be the same as the name above
-  version = '0.1.0',
-  description = 'Model Library for ldap3',
+  packages = ['ldapper'], # this must be the same as the name above
+  version = '0.1.1',
+  description = 'Model Library for ldap3 - Simple Data models with ldap3',
   author = 'Johan Jatko',
   author_email = 'armedguy@ludd.ltu.se',
   url = 'https://github.com/ArmedGuy/Ldapper', # use the URL to the github repo
