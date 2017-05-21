@@ -41,7 +41,7 @@ class LdapperModelDefinition(object):
 
     def find(self, **kwargs):
         search = "(&"
-        for pair in kwargs.items():
+        for pair in list(kwargs.items()):
             search += "(%s=%s)" % pair
         search += ")"
         return self.find_raw(search)
@@ -64,7 +64,7 @@ class LdapperModelDefinition(object):
             pass
         else:
             changes = {}
-            for key, value in obj._newValues.items():
+            for key, value in list(obj._newValues.items()):
                 if value == None: # delete
                     changes[key] = [(MODIFY_DELETE,[])]
                 elif not hasattr(obj._entry, key):
